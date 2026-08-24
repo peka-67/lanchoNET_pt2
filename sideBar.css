@@ -1,0 +1,36 @@
+
+
+*{
+    font-family: "Google Sans Flex", sans-serif;
+    margin:0;
+    padding:0;
+}
+.offcanvas-title{
+    font-size: 2rem;
+}
+.barraLateral{
+    width: 20vw;
+    height: 100vh;
+   background-color: #3d322f;
+   color: rgb(255, 255, 255);
+   border-radius: 0 15px 15px 0;
+   padding: 2rem;
+   font-size: 1.5rem;
+   position:sticky;
+   margin-left: -2rem;
+}
+
+.imglogo{
+ width: 15vw;
+}
+
+.nav-item:hover {
+  background-color: #df86018e;
+  border-radius: 10px;
+  margin-left: 8px;
+  transition: 0.4s;
+}
+
+.nav-link:hover{
+    padding-left: 15px;
+}

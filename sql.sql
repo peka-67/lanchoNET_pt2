@@ -1,0 +1,1 @@
+INSERT INTO categorias (nome, descricao, ativo) VALUES ('lanches', 'insira descrição', '1')
