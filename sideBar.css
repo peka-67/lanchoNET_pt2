@@ -24,13 +24,17 @@
  width: 15vw;
 }
 
-.nav-item:hover {
-  background-color: #df86018e;
-  border-radius: 10px;
-  margin-left: 8px;
-  transition: 0.4s;
+.nav-item a.active {
+    background-color: #df86018e;
+    border-radius: 10px;
+    border-left: solid 6px #ff906b8d;
+    transition: 0.1s;
+    margin-left: 8px;
 }
 
-.nav-link:hover{
-    padding-left: 15px;
+
+.nav-item .nav-link:hover {
+  background-color: #df86018e;
+  border-radius: 10px;
+  transition: 0.4s;
 }

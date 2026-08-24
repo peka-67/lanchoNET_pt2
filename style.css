@@ -18,57 +18,65 @@
 
 
 /* inicio css do caixa */
-
-    #caixaMainDiv {
-        background-color: rgb(228,228,228);
-        display: flex; 
-        flex-direction: row;
-        
-    }
-
-    .categoriasBorda {
-        border-radius: 12px;
-        background-color: white;
-        width: fit-content !important;
-        
-    }
-
-    .categoriasBorda a {
-        text-decoration: none;
-        color: black;
-        font-size: 19px;
-    }
-
-    .categorias {
-        display: flex;
-        flex-direction: row;
-        gap: 8px;
-        flex-wrap: wrap;
-    }
-
-    .caixaBody {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        padding: 14px;
-    }
-
-    .cardsCaixa {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-    }
     
-    .produtosCaixa {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 10px;
-        align-items: center;
-        justify-content: center;
-    }
+.body {
+     background-color: rgb(228, 228, 228);
+}
 
-    
+.caixaBody {
+   place-items: center;
+   align-content: center;
+  
+}
+
+.cardResumo {
+    place-items: center;
+    padding: 0 !important;
+    align-content: center;
+    width: fit-content;
+}
+
+.produtosCaixa {
+    place-items: center;
+    align-content: center;
+    justify-content: center;
+    gap: 2vh;
+}
+
+.categorias {
+    display: flex;
+    text-align: center;
+    gap: 8px;
+}
+
+.categoriasBorda {
+    border-radius: 12px;
+    background-color: white;
+}
+
+.categoriasBorda a {
+    text-decoration: none;
+    color: black;
+    font-size: 19px;
+}
+
+
+
 /* fim css do caixa */
+
+/* inicio do css dos pedidos */
+
+.addPedido {
+    width: 15vw;
+    
+}
+
+.table {
+    border: 1px solid black !important;
+    border-radius: 12px !important;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    width: 100%;
+}
+/* fim do css dos pedidos */
