@@ -1,0 +1,1 @@
+<span class="badge text-bg-warning">Estoque baixo</span>

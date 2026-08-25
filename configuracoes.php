@@ -13,19 +13,45 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link href="sideBar.css" rel="stylesheet">
   <title>Caixa</title>
 </head>
 
-<body>
-
-  <div class="caixaMain">
-    <div>
+<body class="body">
+  <div class="row container-fluid">
+    <div style="width: fit-content;">
       <?php
       include './fragmentos/menulateral.php'
-        ?>
+      ?>
+    </div>
+    <div class="col">
+      <div class="row pedidosDivCol">
+        <div style="margin-top: 20px;" class="row">
+          <h1>Configurações</h1>
+        </div>
+        <hr>
+      </div>
+      <div class="row">
+        <form class="row g-3">
+          <div class="col-md-6">
+            <label for="" class="form-label">Nome da loja</label>
+            <input type="text" class="form-control" id="">
+          </div>
+          <div class="col-md-6">
+            <label for="" class="form-label">Telefone</label>
+            <input type="text" class="form-control" id="" placeholder="(44) 99676-4242">
+          </div>
+          <div class="col-12">
+            <label for="inputAddress" class="form-label">Address</label>
+            <input type="text" class="form-control" id="inputAddress" placeholder="Rua exemplo, 123">
+          </div>
+          <div class="col-12">
+            <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>

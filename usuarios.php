@@ -13,19 +13,58 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link href="sideBar.css" rel="stylesheet">
   <title>Caixa</title>
 </head>
 
-<body>
-
-  <div class="caixaMain">
-    <div>
+<body class="body">
+  <div class="row container-fluid">
+    <div style="width: fit-content;">
       <?php
       include './fragmentos/menulateral.php'
-        ?>
+      ?>
+    </div>
+    <div class="col pedidosDivCol">
+      <div style="margin-top: 20px;" class="row">
+        <h1>Usuarios</h1>
+      </div>
+      <hr>
+      <br>
+      <div class="addPedido row">
+        <a class="btn btn-primary btn-lg ">Large button</a>
+      </div>
+      <br>
+      <div class="row">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Usuario</th>
+              <th scope="col">Função</th>
+              <th scope="col">Ultimo acesso</th>
+              <th scope="col">Status</th>
+              
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>fulano <br> <small>exemplo@gmail.com</small> </td>
+              <td>Manager</td>
+              <td>dia, horario</td>
+              <td> <?php include './fragmentos/ativo.php' ?> </td>   
+            </tr>
+             
+            <tr>
+              <td>fulano <br> <small>exemplo@gmail.com</small> </td>
+              <td>Manager</td>
+              <td>dia, horario</td>
+              <td> <?php include './fragmentos/inativo.php' ?> </td>   
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>

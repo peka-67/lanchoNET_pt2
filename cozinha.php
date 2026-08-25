@@ -17,17 +17,59 @@
   <title>Caixa</title>
 </head>
 
-<body>
-  <div class="container-fluid">
-    <div>
+<body class="body">
+  <div class="row container-fluid">
+    <div style="width: fit-content;">
       <?php
       include './fragmentos/menulateral.php'
-        ?>
+      ?>
     </div>
-
-    <h1> Cozinha </h1>
-
-    
+    <div class="col">
+      <div style="margin-top: 20px;" class="row">
+        <h1>Cozinha</h1>
+      </div>
+      <hr>
+      <div class="cardsCozinha">
+        <div class="statusCard">
+          <div class="tituloCard">
+            <?php include './fragmentos/emPrep.php' ?>
+          </div>
+          <div class="card cardsPreparo">
+            <h5 class="card-header">Pedido #6742</h5>
+            <div class="card-body">
+              <h5 class="card-title">produto 1</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+          <div class="card cardsPreparo">
+            <h5 class="card-header">Pedido #6742</h5>
+            <div class="card-body">
+              <h5 class="card-title">produto 1</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="statusCard">
+          <div class="tituloCard">
+            <?php include './fragmentos/pronto.php' ?>
+          </div>
+          <div class="card cardsPreparo">
+            <h5 class="card-header">Pedido #6742</h5>
+            <div class="card-body">
+              <h5 class="card-title">produto 1</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+          <div class="card cardsPreparo">
+            <h5 class="card-header">Pedido #6742</h5>
+            <div class="card-body">
+              <h5 class="card-title">produto 1</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
 </body>

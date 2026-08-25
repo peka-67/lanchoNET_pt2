@@ -31,9 +31,14 @@
 
 .cardResumo {
     place-items: center;
-    padding: 0 !important;
+    padding: 50px !important;
     align-content: center;
-    width: fit-content;
+    
+    
+}
+
+.caixaPagamento {
+    height: 100vh;
 }
 
 .produtosCaixa {
@@ -41,6 +46,7 @@
     align-content: center;
     justify-content: center;
     gap: 2vh;
+   
 }
 
 .categorias {
@@ -52,6 +58,7 @@
 .categoriasBorda {
     border-radius: 12px;
     background-color: white;
+    padding: 6px;
 }
 
 .categoriasBorda a {
@@ -60,7 +67,15 @@
     font-size: 19px;
 }
 
+.imgProduto {
+    width: 15px;
+    height: 120px;
+    object-fit: cover;
+}
 
+.cardProduto {
+    padding: 0 !important;
+}
 
 /* fim css do caixa */
 
@@ -72,7 +87,7 @@
 }
 
 .table {
-    border: 1px solid black !important;
+    background-color: white;
     border-radius: 12px !important;
     border-collapse: separate;
     border-spacing: 0;
@@ -80,3 +95,59 @@
     width: 100%;
 }
 /* fim do css dos pedidos */
+
+/* inicio do css cozinha */
+
+.cardsCozinha {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.tituloCard {
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 14px;
+}
+
+.statusCard {
+    background-color: #c7c2bf;
+    padding: 20px 100px 40px 100px;
+    border-radius: 14px;
+
+}
+
+.cardsPreparo {
+    width: 600px;
+    margin-bottom: 20px;
+}
+
+
+
+/* fim do css cozinha */
+
+/* inicio do css do cardapio */
+
+
+/* fim do css do cardapio */
+
+
+
+/* inicio do css do estoque */
+
+.cardsEstoque {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.estoqueCardTitulo {
+    font-size: 30px;
+}
+
+.cardEstoqueItem {
+    width: 25vw;
+}
+
+
+/* fim do css do estoque */
