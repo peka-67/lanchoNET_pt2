@@ -20,8 +20,8 @@
 <body class="body">
   <div class="row container-fluid">
     <div style="width: fit-content;">
-    <?php
-    include './fragmentos/menulateral.php'
+      <?php
+      include './fragmentos/menulateral.php'
       ?>
     </div>
     <div class="col">
@@ -30,56 +30,55 @@
           <h1>Cardápio</h1>
         </div>
         <hr>
-
         <div class="col-8">
-            <div class="row categorias">
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> lanches </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
-              <div class="categoriasBorda container-fluid">
-                <a href="#"> categoria 1 </a>
-              </div>
+          <div class="row categorias">
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> lanches </a>
             </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+            <div class="categoriasBorda container-fluid">
+              <a href="#"> categoria 1 </a>
+            </div>
+          </div>
           <div class="row produtosCaixa">
             <div class="card cardProduto" style="width: 18rem;">
               <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
@@ -94,7 +93,7 @@
               <div class="card-body">
                 <h5 class="card-title">x-salada</h5>
                 <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
+                <a href="#" class="botaoCaixa btn btn-primary">Adicionar ao pedido</a>
               </div>
             </div>
             <div class="card cardProduto" style="width: 18rem;">
@@ -201,7 +200,7 @@
               <li class="list-group-item"> Total </li>
             </ul>
             <div class="card-body d-grid gap-2">
-              <a href="#" class="btn btn-primary"> Continuar </a>
+              <a href="#" class="botaoPagamentoCaixa btn btn-primary"> Continuar </a>
             </div>
           </div>
         </div>

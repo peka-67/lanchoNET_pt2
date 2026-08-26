@@ -31,7 +31,7 @@
       <hr>
       <br>
       <div class="botaoGrande row">
-        <a class="btn btn-primary btn-lg ">Large button</a>
+        <a href="caixa.php" class="btn btn-primary btn-lg ">+ Novo pedido</a>
       </div>
       <br>
       <div class="row">
@@ -44,6 +44,7 @@
               <th scope="col">Valor</th>
               <th scope="col">Status</th>
               <th scope="col">Horário</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -54,6 +55,7 @@
               <td>27,25</td>
               <td> <?php include './fragmentos/emPrep.php' ?> </td>
               <td> 3:00 AM</td>
+              <td>  <a href="finalizarPagamento.php" class="fazerPagamento btn btn-primary btn-lg ">+ Fazer pagamento</a> </td>
             </tr>
              
             

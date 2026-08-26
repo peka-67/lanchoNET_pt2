@@ -31,7 +31,7 @@
       <hr>
       <br>
       <div class="botaoGrande row">
-        <a class="btn btn-primary btn-lg ">Large button</a>
+        <a class="btn btn-primary btn-lg ">Adicionar ao estoque</a>
       </div>
       <br>
       <div class="cardsEstoque">

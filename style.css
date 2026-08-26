@@ -1,3 +1,10 @@
+/* paleta de cores usada
+    background - rgb(228, 228, 228)
+    fundo da side bar - #3d322f
+    laranja - #df86018e
+*/
+
+
 /* inicio do css do login */
 
 /* fim do css do login */
@@ -32,6 +39,12 @@
     
 }
 
+.fazerPagamento {
+    padding: 4px 8px !important;
+    width: 13vw;
+    background-color: #df8601 !important;
+    border: none !important;
+}
 
 .produtosCaixa { 
     gap: 10px;
@@ -69,12 +82,25 @@
     padding: 0 !important;
 }
 
+.botaoCaixa {
+    background-color:#df8601 !important;
+    border: none !important;
+}
+
+.botaoPagamentoCaixa {
+    background-color:#df8601 !important;
+    border: none !important;
+}
+
 /* fim css do caixa */
 
 /* inicio do css dos pedidos */
 
-.botaoGrande {
+
+.botaoGrande a {
     width: 15vw;
+    background-color: #df8601 !important;
+    border: none !important;
     
 }
 
@@ -104,7 +130,7 @@
 
 .statusCard {
     background-color: #c7c2bf;
-    padding: 20px 100px 40px 100px;
+    padding: 15px 75px 30px 75px;
     border-radius: 14px;
 
 }
@@ -114,7 +140,17 @@
     margin-bottom: 20px;
 }
 
+@media (max-width:1919px) {
+    .statusCard {
+        width: 500px;
+        padding: 10px 50px 20px 50px;
+    }
 
+    .cardsPreparo {
+        width: 400px;
+        margin-bottom: 10px;
+    }
+}
 
 /* fim do css cozinha */
 
@@ -143,3 +179,8 @@
 
 
 /* fim do css do estoque */
+
+.botaoConfiguracoes {
+    background-color:#df8601 !important;
+    border: none !important;
+}

@@ -46,12 +46,11 @@
             <input type="text" class="form-control" id="inputAddress" placeholder="Rua exemplo, 123">
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+            <button type="submit" class="botaoConfiguracoes btn btn-primary btn-lg">Salvar alterações</button>
           </div>
         </form>
       </div>
     </div>
   </div>
 </body>
-
 </html>

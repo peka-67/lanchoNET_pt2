@@ -13,19 +13,53 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+  <link href="sideBar.css" rel="stylesheet">
   <title>Caixa</title>
 </head>
 
-<body>
-
-  <div class="caixaMain">
-    <div>
+<body class="body">
+  <div class="row container-fluid">
+    <div style="width: fit-content;">
       <?php
       include './fragmentos/menulateral.php'
-        ?>
+      ?>
+    </div>
+    <div class="col">
+      <div style="margin-top: 20px;" class="row">
+        <h1>Relatório</h1>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 style="font-size: 30px;" class="card-title">Faturamento do mês</h5>
+              <p style="font-size: 25px;" class="card-text">-200.000</p>
+              <p style="font-size: 23px;" class="card-text">porcentagem</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 style="font-size: 30px;" class="card-title">Pedidos no mês</h5>
+              <p style="font-size: 25px;" class="card-text">1</p>
+              <p style="font-size: 23px;" class="card-text">porcentagem</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <div class="card-body">
+              <h5 style="font-size: 30px;" class="card-title">Melhor canal</h5>
+              <p style="font-size: 25px;" class="card-text">nenhum</p>
+              <p style="font-size: 23px;" class="card-text">porcentagem </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
 </body>
 
 </html>

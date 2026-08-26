@@ -25,7 +25,7 @@
             <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'estoque.php') ? 'active' : ''; ?>" href="estoque.php"><i class="fa-solid fa-box-archive" style="color: rgb(255, 255, 255);"></i> Estoque</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'relatorio.php') ? 'active' : ''; ?>" href="relatorio.php"><i class="fa-regular fa-chart-bar" style="color: rgb(255, 255, 255);"></i>Relatório</a>
+            <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'relatorios.php') ? 'active' : ''; ?>" href="relatorios.php"><i class="fa-regular fa-chart-bar" style="color: rgb(255, 255, 255);"></i>Relatório</a>
           </li>
           <li class="nav-item">
             <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'usuarios.php') ? 'active' : ''; ?>" href="usuarios.php"><i class="fa-solid fa-users" style="color: rgb(255, 255, 255);"></i> Usuários</a>
