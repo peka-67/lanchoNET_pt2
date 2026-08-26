@@ -19,9 +19,11 @@
 
 <body class="body">
   <div class="row container-fluid">
+    <div style="width: fit-content;">
     <?php
     include './fragmentos/menulateral.php'
       ?>
+    </div>
     <div class="col">
       <div class="row">
         <div style="margin-top: 20px;" class="">
@@ -30,8 +32,7 @@
         <hr>
 
         <div class="col-8">
-          <div class="row">
-            <div class="categorias">
+            <div class="row categorias">
               <div class="categoriasBorda container-fluid">
                 <a href="#"> lanches </a>
               </div>
@@ -48,8 +49,37 @@
               <div class="categoriasBorda container-fluid">
                 <a href="#"> categoria 1 </a>
               </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
+              <div class="categoriasBorda container-fluid">
+                <a href="#"> categoria 1 </a>
+              </div>
             </div>
-          </div>
           <div class="row produtosCaixa">
             <div class="card cardProduto" style="width: 18rem;">
               <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">

@@ -30,7 +30,7 @@
       </div>
       <hr>
       <br>
-      <div class="addPedido row">
+      <div class="botaoGrande row">
         <a class="btn btn-primary btn-lg ">Large button</a>
       </div>
       <br>
