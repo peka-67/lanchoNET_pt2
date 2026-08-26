@@ -31,7 +31,7 @@
       <hr>
       <br>
       <div class="botaoGrande row">
-        <a class="btn btn-primary btn-lg ">Adicionar usuario</a>
+        <a href="addUsuario.php" class="btn btn-primary btn-lg ">Adicionar usuario</a>
       </div>
       <br>
       <div class="row">

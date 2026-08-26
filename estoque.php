@@ -31,7 +31,7 @@
       <hr>
       <br>
       <div class="botaoGrande row">
-        <a class="btn btn-primary btn-lg ">Adicionar ao estoque</a>
+        <a href="addEstoque.php" class="btn btn-primary btn-lg ">Adicionar ao estoque</a>
       </div>
       <br>
       <div class="cardsEstoque">
@@ -63,6 +63,7 @@
               <th scope="col">Atual</th>
               <th scope="col">Mínimo</th>
               <th scope="col">Status</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -72,6 +73,7 @@
               <td>80 kg</td>
               <td>80 kg</td>
               <td> <?php include './fragmentos/estoqueNormal.php'?> </td>
+              <td> <a href=""> <i class="fa-solid fa-pen-to-square fa-lg" style="color: rgb(1, 92, 164);"></i> </a> </td>
             </tr>
             <tr>
               <td>Hamburger</td>

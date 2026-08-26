@@ -31,7 +31,7 @@
       <hr>
       <br>
       <div class="botaoGrande row">
-        <a class="btn btn-primary btn-lg ">Adicionar ao cardápio</a>
+        <a href="addCardapio.php" class="btn btn-primary btn-lg ">Adicionar ao cardápio</a>
       </div>
       <br>
       <div class="row divTabelaCardapio">
@@ -42,6 +42,7 @@
               <th scope="col">Categoria</th>
               <th scope="col">Preço</th>
               <th scope="col">Disponibilidade</th>
+              <th scope="col"></th>
             </tr>
           </thead>
           <tbody>
@@ -50,6 +51,7 @@
               <td>Pessoa</td>
               <td>2700,50</td>
               <td> <?php include './fragmentos/disponivel.php' ?> </td>
+              <td> <a href=""> <i class="fa-solid fa-pen-to-square fa-lg" style="color: rgb(1, 92, 164);"></i> </a> </td>
             </tr>
              <tr>
               <td>X-tudo</td>
