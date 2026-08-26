@@ -23,36 +23,26 @@
      background-color: rgb(228, 228, 228);
 }
 
-.caixaBody {
-   place-items: center;
-   align-content: center;
-  
+.caixa {
+    justify-content: center;
+    align-items: center;
 }
 
 .cardResumo {
-    place-items: center;
-    padding: 50px !important;
-    align-content: center;
-    
     
 }
 
-.caixaPagamento {
-    height: 100vh;
-}
 
-.produtosCaixa {
-    place-items: center;
-    align-content: center;
+.produtosCaixa { 
+    gap: 10px;
     justify-content: center;
-    gap: 2vh;
-   
 }
 
 .categorias {
     display: flex;
     text-align: center;
     gap: 8px;
+    margin-bottom: 10px;
 }
 
 .categoriasBorda {
