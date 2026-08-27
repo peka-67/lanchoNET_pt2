@@ -1,5 +1,8 @@
 <?php 
-  include './backend/validacao.php'
+  include './backend/validacao.php';
+  include './backend/validacaoAdm.php';
+
+  checarCargo('admin');
 ?>
 
 <!doctype html>
@@ -39,6 +42,14 @@
                     <div class="mb-3">
                         <label class="form-label"> Nome </label>
                         <input value="" type="text" name="nome" class="form-control">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Disponibilidade </label>
+                        <select class="form-select" aria-label="Default select example">
+                            <option selected></option>
+                            <option value="1">Ativo</option>
+                            <option value="2">Inativo</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Quantidade </label>

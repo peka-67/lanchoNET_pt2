@@ -23,9 +23,9 @@
         <div class="col-8 col-sm-10 col-md-6 col-lg-4 card shadow p-3 telaLogin">
             <img style="align-self: center;" class="imglogo" src="./logo.png" alt="">
             <div class="text-center">
-                <h3 class="m-4">Login Convencional</h3>
+                <h3 class="m-4">Login Restaurante</h3>
             </div>
-            <form action="./backend/logar.php" method="post">
+            <form action="./backend/loginAdm.php" method="post">
                 <div class="mb-3">
                     <label class="form-label"> Email </label>
                     <input type="email" name="email" class="form-control">
@@ -38,7 +38,6 @@
                     Login ou senha incorretos.
                 </div>
                 <button type="submit" style="background-color: #df8601 !important;  border: none !important;" class="btn btn-primary btn-lg"> Entrar </button>
-                <a href="./loginAdm.php" style="background-color: #df8601 !important;  border: none !important;" class="btn btn-primary btn-lg"> Ir p/ login restaurante </a>
             </form>
 
         </div>

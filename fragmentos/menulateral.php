@@ -1,4 +1,7 @@
-
+<?php 
+  include './backend/validacaoAdm.php';
+  include './backend/validacao.php';
+?>
 
   <div class="barraLateral">
     <div class="offcanvas-body">
@@ -6,9 +9,11 @@
      <img class="imglogo" src="./logo.png" alt="">
       </div>
       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+        <?php if ($_SESSION['cargo'] == checarCargo('admin')): ?>
           <li class="nav-item">
             <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'dashboard.php') ? 'active' : ''; ?> " aria-current="page" href="dashboard.php"><i class="fa-solid fa-house" style="color: rgb(255, 255, 255);"></i> Página inicial</a>
           </li>
+        <?php endif; ?>
           <li class="nav-item">
             <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'caixa.php') ? 'active' : ''; ?>" href="caixa.php"><i class="fa-solid fa-cash-register" style="color: rgb(255, 255, 255);"></i> Caixa</a>
           </li>
