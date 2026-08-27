@@ -7,6 +7,15 @@
 
 /* inicio do css do login */
 
+.telaLogin {
+    background-color: #3d322f !important;
+    color: white !important;
+}
+
+.corpoLogin {
+    background-color: rgb(228, 228, 228);
+}
+
 /* fim do css do login */
 
 /* inicio do css da dashboard */

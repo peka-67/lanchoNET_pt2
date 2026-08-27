@@ -34,9 +34,6 @@
                     <label class="form-label"> Senha </label>
                     <input type="password" name="senha" class="form-control">
                 </div>
-                <div class="alert alert-danger" role="alert">
-                    Login ou senha incorretos.
-                </div>
                 <button type="submit" style="background-color: #df8601 !important;  border: none !important;" class="btn btn-primary btn-lg"> Entrar </button>
             </form>
 

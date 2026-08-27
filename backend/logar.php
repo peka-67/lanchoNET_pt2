@@ -7,7 +7,7 @@
     $senha = $_REQUEST['senha'];
 
     //SQL que busca no banco um usuário com o email e senha recebidos 
-    $sql = "SELECT * FROM usuario WHERE email = '$email' AND senha = '$senha'";
+    $sql = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
     //executar a SQL
     $resultado = mysqli_query($conexao, $sql);
     //pegar valores das colunas do banco

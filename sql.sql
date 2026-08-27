@@ -23,32 +23,32 @@ ALTER TABLE pagamento ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(i
 ALTER TABLE movimento_estoque ADD COLUMN id_restaurante INT;
 ALTER TABLE movimento_estoque ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
 
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
+ALTER TABLE itens_estoque ADD COLUMN id_restaurante INT;
+ALTER TABLE itens_estoque ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+
+ALTER TABLE itens_adicionais ADD COLUMN id_restaurante INT;
+ALTER TABLE itens_adicionais ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+
+ALTER TABLE clientes ADD COLUMN id_restaurante INT;
+ALTER TABLE clientes ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+
+ALTER TABLE categorias ADD COLUMN id_restaurante INT;
+ALTER TABLE categorias ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+
+ALTER TABLE caixa_movimento ADD COLUMN id_restaurante INT;
+ALTER TABLE caixa_movimento ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+
+ALTER TABLE caixa ADD COLUMN id_restaurante INT;
+ALTER TABLE caixa ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+
+ALTER TABLE auditoria_registro ADD COLUMN id_restaurante INT;
+ALTER TABLE auditoria_registro ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+
+ALTER TABLE adicional_item_pedidos ADD COLUMN id_restaurante INT;
 ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
 
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+ALTER TABLE adicionais ADD COLUMN id_restaurante INT;
+ALTER TABLE adicionais ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
 
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
-
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
-
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
-
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
-
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
-
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
-
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
-
-ALTER TABLE usuarios ADD COLUMN id_restaurante INT;
-ALTER TABLE usuarios ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);
+ALTER TABLE itens_pedidos ADD COLUMN id_restaurante INT;
+ALTER TABLE itens_pedidos ADD FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id);

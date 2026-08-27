@@ -1,6 +1,6 @@
 <?php 
     $endereco = "localhost";
-    $nome = "lancho-net";
+    $nome = "lancho_net";
     $usuario = "root";
     $senha = "";
 
