@@ -26,6 +26,13 @@ if (mysqli_num_rows($resultado) > 0) {
     $_SESSION['usuario_id'] = $colunas['id'];
     $_SESSION['cargo'] = $colunas['cargo'];
 
+    function restaurante($idRestaurante, $usuario_restaurante_id)
+    {
+        $sqlRestaurante = 'SELECT * FROM usuarios';
+        $resultado = mysqli_query($conexao, $sqlRestaurante);
+        $colunas = mysqli_fetch_assoc($resultado);
+    }
+
     header('location:../caixa.php');
 } else {
     header('location:../loginErrado.php');

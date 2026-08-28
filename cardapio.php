@@ -34,9 +34,11 @@
       </div>
       <hr>
       <br>
+      <?php if ($_SESSION['cargo'] == 'admin'): ?>
       <div class="botaoGrande row">
         <a href="addCardapio.php" class="btn btn-primary btn-lg ">Adicionar ao cardápio</a>
       </div>
+      <?php endif;?>
       <br>
       <div class="row divTabelaCardapio">
         <table class="table tabelaCardapio">
@@ -46,7 +48,9 @@
               <th scope="col">Categoria</th>
               <th scope="col">Preço</th>
               <th scope="col">Disponibilidade</th>
+              <?php if ($_SESSION['cargo'] == 'admin'): ?>
               <th scope="col"></th>
+              <?php endif;?>
             </tr>
           </thead>
           <tbody>
@@ -55,7 +59,7 @@
               <td>Pessoa</td>
               <td>2700,50</td>
               <td> <?php include './fragmentos/disponivel.php' ?> </td>
-              <td> <a href=""> <i class="fa-solid fa-pen-to-square fa-lg" style="color: rgb(1, 92, 164);"></i> </a> </td>
+              <?php if ($_SESSION['cargo'] == 'admin'): ?> <td> <a href=""> <i class="fa-solid fa-pen-to-square fa-lg" style="color: rgb(1, 92, 164);"></i> </a> </td> <?php endif;?>
             </tr>
              <tr>
               <td>X-tudo</td>

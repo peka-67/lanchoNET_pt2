@@ -1,5 +1,8 @@
 <?php 
-  include './backend/validacao.php'
+  include './backend/validacao.php';
+  include './backend/validacaoAdm.php';
+
+  checarCargo('admin');
 ?>
 
 <!doctype html>

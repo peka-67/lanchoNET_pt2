@@ -1,6 +1,6 @@
-<?php 
-  include './backend/validacao.php'
-?>
+<?php
+include './backend/validacao.php'
+  ?>
 
 <!doctype html>
 <html lang="pt-BR">
@@ -26,7 +26,7 @@
     <div style="width: fit-content;">
       <?php
       include './fragmentos/menulateral.php'
-      ?>
+        ?>
     </div>
     <div class="col">
       <div class="row">
@@ -39,59 +39,11 @@
             <div class="categoriasBorda container-fluid">
               <a href="#"> lanches </a>
             </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
-            <div class="categoriasBorda container-fluid">
-              <a href="#"> categoria 1 </a>
-            </div>
           </div>
           <div class="row produtosCaixa">
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
+            <?php 
+              $sql = 'SELECT * FROM produtos '
+            ?>
             <div class="card cardProduto" style="width: 18rem;">
               <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
               <div class="card-body">
@@ -100,95 +52,6 @@
                 <a href="#" class="botaoCaixa btn btn-primary">Adicionar ao pedido</a>
               </div>
             </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-            <div class="card cardProduto" style="width: 18rem;">
-              <img src="./assets/hamburger.jpg" class="card-img-top imgProduto" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">x-salada</h5>
-                <p class="card-text"> 28,50 R$ </p>
-                <a href="#" class="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-
           </div>
         </div>
 
