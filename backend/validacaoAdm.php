@@ -1,7 +1,4 @@
 <?php 
-//iniciar sessão
-
-//se não houver variavel de sessão cpf e senha
 function checarCargo($cargoPermitido) {
     if (!isset($_SESSION['cargo'])) {
         header('../index.php');
@@ -14,5 +11,9 @@ function checarCargo($cargoPermitido) {
     }
 
 }
+
+//function loginAdm($cargoMaximo) {
+//    if ($_SESSION[''])
+//}
 
 ?>

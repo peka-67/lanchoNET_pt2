@@ -42,11 +42,15 @@
                     <div class="mb-3">
                         <label class="form-label">Categoria do produto</label>
                         <select class="form-select" aria-label="Default select example">
-                            <option selected>Cargo</option>
-                            <option value="1">Gerente</option>
-                            <option value="2">Caixa</option>
-                            <option value="3">Cozinheiro</option>
-                            <option value="4">Garçom</option>
+                            <option selected></option>
+                            <option value="1">Lanche</option>
+                            <option value="2">Porção</option>
+                            <option value="3">Bebida</option>
+                            <option value="4">Prato</option>
+                            <option value="5"></option>
+                            <option value="6">Bebida</option>
+                            <option value="7">Bebida</option>
+                            <option value="8">Sorvete/milkshake</option>
                         </select>
                     </div>
                     <div class="mb-3">
@@ -55,15 +59,11 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Descrição </label>
-                        <input value="" type="text" name="descricao" class="form-control">
+                        <input value="" type="text" name="descricao" class="form-control" placeholder="insira ingredientes do produto aqui">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Preço </label>
-                        <input value="" type="password" name="preco" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label"> Imagem </label>
-                        <input value="" type="password" name="img" class="form-control">
+                        <input value="" type="text" name="preco" class="form-control">
                     </div>
                     <button style="background-color: #df8601 !important; border: none !important;" type="submit" class="btn btn-primary"> Cadastrar </button>
                 </form>

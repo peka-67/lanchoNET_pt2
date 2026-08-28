@@ -133,7 +133,7 @@
 
 .tituloCard {
     padding: 10px;
-    font-size: 20px;
+    font-size: 30px;
     margin-bottom: 14px;
 }
 
@@ -145,21 +145,11 @@
 }
 
 .cardsPreparo {
-    width: 550px;
+    width: 700px;
     margin-bottom: 20px;
 }
 
-@media (max-width:1919px) {
-    .statusCard {
-        width: 500px;
-        padding: 10px 50px 20px 50px;
-    }
 
-    .cardsPreparo {
-        width: 400px;
-        margin-bottom: 10px;
-    }
-}
 
 /* fim do css cozinha */
 
