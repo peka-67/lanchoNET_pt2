@@ -45,15 +45,15 @@ checarCargo('admin');
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Endereço </label>
-                        <input value="" type="text" name="nome" class="form-control">
+                        <input value="" type="text" name="endereco" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Telefone </label>
-                        <input value="" type="text" name="nome" class="form-control">
+                        <input value="" type="text" name="telefone" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Cnpj </label>
-                        <input value="" type="text" name="nome" class="form-control">
+                        <input value="" type="text" name="cnpj" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> email </label>

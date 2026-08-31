@@ -55,10 +55,10 @@
                         <label class="form-label">Cargo do usuario </label>
                         <select class="form-select" aria-label="Default select example">
                             <option selected>Cargo</option>
-                            <option value="1">Gerente</option>
-                            <option value="2">Caixa</option>
-                            <option value="3">Cozinheiro</option>
-                            <option value="4">Garçom</option>
+                            <!-- <option value="1">Gerente</option> -->
+                            <option value="1">Caixa</option>
+                            <option value="2">Cozinha</option>
+                            <option value="3">Garçom</option>
                         </select>
                     </div>
                     <button style="background-color: #df8601 !important; border: none !important;" type="submit" class="btn btn-primary"> Cadastrar </button>
