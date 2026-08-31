@@ -38,6 +38,9 @@
       <div class="botaoGrande row">
         <a href="addCardapio.php" class="btn btn-primary btn-lg ">Adicionar ao cardápio</a>
       </div>
+      <div class="botaoGrande row">
+        <a href="addCategoria.php" class="btn btn-primary btn-lg ">Adicionar categoria</a>
+      </div>
       <?php endif;?>
       <br>
       <div class="row divTabelaCardapio">

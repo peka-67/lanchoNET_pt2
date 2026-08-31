@@ -1,8 +1,10 @@
 <?php
-include './backend/validacao.php';
-include './backend/validacaoAdm.php';
+//include './backend/validacao.php';
+//include './backend/validacaoAdm.php';
+include '../backend/conexao.php';
+$destino = './CRUDrestaurante/inserir.php';
 
-checarCargo('admin');
+//checarCargo('admin');
 ?>
 
 <!doctype html>
@@ -29,11 +31,11 @@ checarCargo('admin');
         <div class="row">
             <div style="width: fit-content;">
                 <?php
-                include './fragmentos/menulateral.php'
+                include '.././fragmentos/menulateral.php'
                 ?>
             </div>
             <div class="col">
-                <form action="" method="post" enctype="multipart/form-data" class="p-3">
+                <form action="<?= $destino ?>" method="post" enctype="multipart/form-data" class="p-3">
                     <h2>Cadastro Restaurante</h2>
                     <div class="mb-3">
                         <label class="form-label"> id </label>
@@ -63,74 +65,38 @@ checarCargo('admin');
                         <label class="form-label"> Senha </label>
                         <input value="" type="password" name="senha" class="form-control">
                     </div>
-                    <div class="mb-3">
-                        <label class="form-label">Categorias</label>
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" value="1" id="checkDefault1">
-                            <label class="form-check-label" for="checkDefault1">
-                                Lanches
-                            </label>
-                            <input class="form-check-input" type="checkbox" value="2" id="checkDefault2">
-                            <label class="form-check-label" for="checkDefault2">
-                                Porções
-                            </label>
-                            <input class="form-check-input" type="checkbox" value="3" id="checkDefault3">
-                            <label class="form-check-label" for="checkDefault3">
-                                Pratos
-                            </label>
-                            <input class="form-check-input" type="checkbox" value="4" id="checkDefault4">
-                            <label class="form-check-label" for="checkDefault4">
-                                Pizzas
-                            </label>
-                            <input class="form-check-input" type="checkbox" value="5" id="checkDefault5">
-                            <label class="form-check-label" for="checkDefault5">
-                                Bebidas
-                            </label>
-                            <input class="form-check-input" type="checkbox" value="8" id="checkDefault8">
-                            <label class="form-check-label" for="checkDefault8">
-                                Bebidas alcoolicas
-                            </label>
-                            <input class="form-check-input" type="checkbox" value="6" id="checkDefault6">
-                            <label class="form-check-label" for="checkDefault6">
-                                Sorvetes/milkshakes
-                            </label>
-                            <input class="form-check-input" type="checkbox" value="7" id="checkDefault7">
-                            <label class="form-check-label" for="checkDefault7">
-                                Outros
-                            </label>
-                        </div>
-                    </div>
-                    <button style="background-color: #df8601 !important; border: none !important;" type="submit" class="btn btn-primary"> Cadastrar </button>
-                </form>
             </div>
-            <div class="col">
-                <br>
-                <h3> <i class="fa-solid fa-address-book"></i> Listagem </h3>
-                <table class="table" id="tabela">
-                    <thead>
-                        <tr>
-                            <th scope="col">#</th>
-                            <th scope="col">Nome</th>
-                            <th scope="col">Email</th>
-                            <th scope="col">Cargo</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>fulano</td>
-                            <td>fulano@gmail.com</td>
-                            <td>Gerente</td>
-                            <td>
-                                <a href=""> <i class="fa-solid fa-pen-to-square" style="color: rgb(1, 92, 164);"></i> </a>
-                                <a href="" onclick="return confirm('Deseja realmente excluir?')"> <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0);"></i> </a>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
+            <button style="background-color: #df8601 !important; border: none !important;" type="submit" class="btn btn-primary"> Cadastrar </button>
+            </form>
         </div>
+        <div class="col">
+            <br>
+            <h3> <i class="fa-solid fa-address-book"></i> Listagem </h3>
+            <table class="table" id="tabela">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Cargo</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>fulano</td>
+                        <td>fulano@gmail.com</td>
+                        <td>Gerente</td>
+                        <td>
+                            <a href=""> <i class="fa-solid fa-pen-to-square" style="color: rgb(1, 92, 164);"></i> </a>
+                            <a href="" onclick="return confirm('Deseja realmente excluir?')"> <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0);"></i> </a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     </div>
 </body>
 

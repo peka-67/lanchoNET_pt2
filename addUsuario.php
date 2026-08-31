@@ -1,8 +1,10 @@
-<?php 
-  include './backend/validacao.php';
-  include './backend/validacaoAdm.php';
+<?php
+include './backend/validacao.php';
+include './backend/validacaoAdm.php';
 
-  checarCargo('admin');
+$destino = './backend/CRUDS/usuarios/inserir.php';
+
+checarCargo('admin');
 ?>
 
 <!doctype html>
@@ -33,11 +35,11 @@
                 ?>
             </div>
             <div class="col">
-                <form action="" method="post" enctype="multipart/form-data" class="p-3">
+                <form action="<?= $destino ?>" method="post" enctype="multipart/form-data" class="p-3">
                     <h2>Cadastro Usuario</h2>
                     <div class="mb-3">
                         <label class="form-label"> id </label>
-                        <input value="" type="text" name="id" class="form-control" readonly>
+                        <input value="<?= $_SESSION['usuario_id'] ?>" type="text" name="id" class="form-control" readonly>
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Nome </label>
@@ -53,12 +55,12 @@
                     </div>
                     <div class="mb-3">
                         <label class="form-label">Cargo do usuario </label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" name="cargo" aria-label="Default select example">
                             <option selected>Cargo</option>
                             <!-- <option value="1">Gerente</option> -->
-                            <option value="1">Caixa</option>
-                            <option value="2">Cozinha</option>
-                            <option value="3">Garçom</option>
+                            <option value="caixa">Caixa</option>
+                            <option value="cozinha">Cozinha</option>
+                            <option value="garcom">Garçom</option>
                         </select>
                     </div>
                     <button style="background-color: #df8601 !important; border: none !important;" type="submit" class="btn btn-primary"> Cadastrar </button>
@@ -74,7 +76,7 @@
                             <th scope="col">Nome</th>
                             <th scope="col">Email</th>
                             <th scope="col">Cargo</th>
-                            
+
                         </tr>
                     </thead>
                     <tbody>

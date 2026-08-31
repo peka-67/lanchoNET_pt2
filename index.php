@@ -35,7 +35,6 @@
                     <input type="password" name="senha" class="form-control">
                 </div>
                 <button type="submit" style="background-color: #df8601 !important;  border: none !important;" class="btn btn-primary btn-lg"> Entrar </button>
-                <a href="./loginAdm.php" style="background-color: #df8601 !important;  border: none !important;" class="btn btn-primary btn-lg"> Ir p/ login restaurante </a>
             </form>
 
         </div>

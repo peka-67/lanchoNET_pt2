@@ -3,7 +3,7 @@
 session_start();
 
 //se não houver variavel de sessão cpf e senha
-if (!isset($_SESSION['email']) or !isset($_SESSION['senha'])) {
+if (!isset($_SESSION['usuario_id']) or !isset($_SESSION['idRestaurante'])) {
     //destruir sessão anterior
     session_destroy();
 
