@@ -1,10 +1,11 @@
 <?php 
-    include 'conexao.php'
+    include '../../backend/conexao.php';
 
     $id = $_REQUEST['id'];
 
-    $sql = "DELETE FROM usuarios WHERE id='$id' ";
+    mysqli_query($conexao, "DELETE FROM  WHERE produto_id='$id'");
+    $sql = "DELETE FROM produto WHERE id='$id' ";
     $resultado = mysqli_query($conexao, $sql);
 
-    header('location:../../addUsuario.php');
+    header('location:../../produto.php');
 ?>

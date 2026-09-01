@@ -24,17 +24,20 @@ include './backend/validacao.php'
 <body class="body">
   <div class="row container-fluid">
     <?php
-    if ($_SESSION['cargo'] == 'admin'):
+   //if ($_SESSION['cargo'] != 'cozinha'):
     ?>
-      <div style="width: fit-content;">
+      <!-- <div style="width: fit-content;"> 
         <?php
-        include './fragmentos/menulateral.php'
+       // include './fragmentos/menulateral.php'
         ?>
-      </div>
-    <?php endif; ?>
+      </div> -->
+    <?php// endif; ?>
     <div class="col">
-      <div style="margin-top: 20px;" class="row">
-        <h1>Cozinha</h1>
+      <div class="" style="display:flex; justify-content: space-between !important;">
+        <div style="margin-top: 20px;" class="row">
+          <h1>Cozinha</h1>
+        </div>
+        <a style="margin-top: 28px; margin-bottom: 8px;"  href="caixa.php" class="btn btn-outline-danger"><i class="fa-solid fa-arrow-left-long"></i> Voltar</a>
       </div>
       <hr>
       <div class="cardsCozinha">
