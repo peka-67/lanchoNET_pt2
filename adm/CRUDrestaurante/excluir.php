@@ -1,11 +1,15 @@
-<?php 
-    include '../../backendconexao.php';
+<?php
+include '../../backend/conexao.php';
 
-    $id = $_REQUEST['id'];
+if($_SESSION['cargo']  )
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    header('location: ../../index.php');
+    exit;
+}
 
-    mysqli_query($conexao, "DELETE FROM  WHERE produto_id='$id'");
-    $sql = "DELETE FROM produto WHERE id='$id' ";
-    $resultado = mysqli_query($conexao, $sql);
+$id = $_POST['id'];
 
-    header('location:../../produto.php');
-?>
+$sql = "DELETE * FROM restaurantes WHERE id='$id' ";
+$resultado = mysqli_query($conexao, $sql);
+
+header('location:.././criarRestaurante.php');

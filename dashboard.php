@@ -1,7 +1,6 @@
 <?php 
   include './backend/validacao.php';
-  include './backend/validacaoAdm.php';
-
+  include './backend/validacaoUsuario.php';
   checarCargo('admin');
 ?>
 

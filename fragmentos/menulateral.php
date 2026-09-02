@@ -24,11 +24,6 @@
           </li>
           <?php if ($_SESSION['cargo'] == 'admin'): ?>
           <li class="nav-item">
-            <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'estoque.php') ? 'active' : ''; ?>" href="estoque.php"><i class="fa-solid fa-box-archive" style="color: rgb(255, 255, 255);"></i> Estoque</a>
-          </li>
-          <?php endif; ?>
-          <?php if ($_SESSION['cargo'] == 'admin'): ?>
-          <li class="nav-item">
             <a class="nav-link <?php echo (basename($_SERVER['PHP_SELF']) == 'relatorios.php') ? 'active' : ''; ?>" href="relatorios.php"><i class="fa-regular fa-chart-bar" style="color: rgb(255, 255, 255);"></i>Relatório</a>
           </li>
           <?php endif; ?>

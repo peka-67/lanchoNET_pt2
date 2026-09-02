@@ -1,10 +1,9 @@
 <?php
-//include './backend/validacao.php';
 //include './backend/validacaoAdm.php';
 include '../backend/conexao.php';
 $destino = './CRUDrestaurante/inserir.php';
 
-//checarCargo('admin');
+//checarCargo('1');
 ?>
 
 <!doctype html>

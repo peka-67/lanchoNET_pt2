@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-$sql = "SELECT * FROM restaurantes WHERE email = 'maceciyema@gmail.com' LIMIT 1";
+$sql = "SELECT * FROM administrador WHERE email = ? LIMIT 1";
 
 // prepara o php para uma execução de instrução do codigo sql
 $stmt = mysqli_prepare($conexao, $sql);
@@ -27,16 +27,17 @@ $resultado = mysqli_stmt_get_result($stmt);
 
 $colunas = mysqli_fetch_assoc($resultado);
 
-if ($colunas && password_verify($senha, $colunas['senha'])) {
+if ($colunas && password_verify($senha, $colunas['senha']) && password_verify($email, $colunas['email']) ) {
     session_regenerate_id(true);
 
-    $_SESSION['usuario'] = $colunas['nome'];
     $_SESSION['email'] = $colunas['email'];
-    $_SESSION['id'] = $colunas['id'];
-    
-    header('location:../adm/criarRestaurante.php');
-} 
+    $_SESSION['admin_id'] = $colunas['id'];
 
+    if ($colunas['admin_id'] === '1' ) {
+        header('location:../adm/criarRestaurante.php');
+    }
+
+} 
 else {
     header('location:../loginErrado.php');
 }

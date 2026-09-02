@@ -4,7 +4,7 @@ CREATE TABLE restaurantes (
     endereco VARCHAR(255) NOT NULL,
     telefone VARCHAR(20) NOT NULL,
     cnpj VARCHAR(30) NOT NULL,
-    email VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
     senha VARCHAR(255) NOT NULL
 );
 
@@ -12,14 +12,14 @@ CREATE TABLE usuarios (
     id INT PRIMARY KEY AUTO_INCREMENT,
     nome VARCHAR(150) NOT NULL,
     email VARCHAR(100) NOT NULL UNIQUE,
-    senha_hash VARCHAR(20) NOT NULL,
+    senha VARCHAR(20) NOT NULL,
     cargo VARCHAR(100),
     ativo BOOLEAN NOT NULL DEFAULT TRUE,
     efetivado_em DATETIME NOT NULL, 
     id_restaurante INT,
     CONSTRAINT fk_restaunte_usuario
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
-
+    ON DELETE CASCADE
 );
 
 CREATE TABLE categorias (
@@ -30,6 +30,7 @@ CREATE TABLE categorias (
     id_restaurante INT,
     CONSTRAINT fk_restaunte_categorias
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE produtos (
@@ -43,10 +44,12 @@ CREATE TABLE produtos (
     id_restaurante INT,
 
     CONSTRAINT fk_categoria_produto
-    FOREIGN KEY (categoria_id) REFERENCES categorias(id),
+    FOREIGN KEY (categoria_id) REFERENCES categorias(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_restaunte_produto
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE adicionais (
@@ -58,6 +61,7 @@ CREATE TABLE adicionais (
     id_restaurante INT,
     CONSTRAINT fk_restaunte_adicionais
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE itens_adicionais (
@@ -69,10 +73,12 @@ CREATE TABLE itens_adicionais (
 
     CONSTRAINT fk_itens_adicionais
     FOREIGN KEY (adicionais_id)
-        REFERENCES adicionais(id),
+        REFERENCES adicionais(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_restaunte_itens_adicionais
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE clientes (
@@ -84,6 +90,7 @@ CREATE TABLE clientes (
     id_restaurante INT,
     CONSTRAINT fk_restaunte_clientes
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE pedidos (
@@ -99,13 +106,16 @@ CREATE TABLE pedidos (
     id_restaurante int,
 
     CONSTRAINT fk_usuarios_pedidos
-    FOREIGN KEY (usuario_id) REFERENCES usuarios(id),
+    FOREIGN KEY (usuario_id) REFERENCES usuarios(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_clientes_pedidos
-    FOREIGN KEY (cliente_id) REFERENCES clientes(id),
+    FOREIGN KEY (cliente_id) REFERENCES clientes(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_restaunte_pedidos
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE itens_pedidos (
@@ -118,13 +128,16 @@ CREATE TABLE itens_pedidos (
     id_restaurante INT,
 
     CONSTRAINT fk_pedidos_itens_pedidos
-    FOREIGN KEY (pedido_id) REFERENCES pedidos(id),
+    FOREIGN KEY (pedido_id) REFERENCES pedidos(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_produtos_itens_pedidos
-    FOREIGN KEY (produto_id) REFERENCES produtos(id),
+    FOREIGN KEY (produto_id) REFERENCES produtos(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_restaunte_itens_pedidos
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE adicional_item_pedidos (
@@ -135,13 +148,16 @@ CREATE TABLE adicional_item_pedidos (
     id_restaurante INT,
 
     CONSTRAINT fk_itens_pedidos_adicional_item_pedidos
-    FOREIGN KEY (id_adicional_pedido) REFERENCES itens_pedidos(id),
+    FOREIGN KEY (id_adicional_pedido) REFERENCES itens_pedidos(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_itens_adicionais_adicional_item_pedidos
-    FOREIGN KEY (id_adicional_item) REFERENCES itens_adicionais(id),
+    FOREIGN KEY (id_adicional_item) REFERENCES itens_adicionais(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_restaunte_adicional_item_pedidos
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE pagamento (
@@ -154,10 +170,12 @@ CREATE TABLE pagamento (
     id_restaurante INT,
 
     CONSTRAINT fk_pedidos_pagamento
-    FOREIGN KEY (id_pedidos) REFERENCES pedidos(id),
+    FOREIGN KEY (id_pedidos) REFERENCES pedidos(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_restaunte_pagamento
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE itens_estoque (
@@ -169,8 +187,9 @@ CREATE TABLE itens_estoque (
     ativo VARCHAR(1) NOT NULL,
     id_restaurante INT,
 
-    CONSTRAINT fk_restaunte_adicional_item_pedidos
+    CONSTRAINT fk_restaunte_itens_estoque
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE movimento_estoque (
@@ -184,10 +203,12 @@ CREATE TABLE movimento_estoque (
     id_restaurante INT,
 
     CONSTRAINT fk_itens_estoque_movimento_estoque
-    FOREIGN KEY (id_estoque_item) REFERENCES itens_estoque(id),
+    FOREIGN KEY (id_estoque_item) REFERENCES itens_estoque(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_usuarios_movimento_estoque
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE caixa (
@@ -203,6 +224,7 @@ CREATE TABLE caixa (
 
     CONSTRAINT fk_restaunte_caixa
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE caixa_movimento (
@@ -216,10 +238,12 @@ CREATE TABLE caixa_movimento (
     id_restaurante INT,
 
     CONSTRAINT fk_caixa_caixa_movimento
-    FOREIGN KEY (id_registro) REFERENCES caixa(id),
+    FOREIGN KEY (id_registro) REFERENCES caixa(id)
+    ON DELETE CASCADE,
 
     CONSTRAINT fk_usuarios_caixa_movimento
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+    ON DELETE CASCADE
 );
 
 CREATE TABLE auditoria_registro (
@@ -233,7 +257,51 @@ CREATE TABLE auditoria_registro (
 
     CONSTRAINT fk_usuarios_auditoria_registro
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id)
+    ON DELETE CASCADE
 
-    CONSTRAINT fk_restaunte_adicional_item_pedidos
+    CONSTRAINT fk_restaunte_auditoria_registro
     FOREIGN KEY (id_restaurante) REFERENCES restaurantes(id)
+    ON DELETE CASCADE
 );
+
+-- alterações no banco 
+
+ALTER TABLE movimento_estoque
+DROP FOREIGN KEY fk_usuarios_movimento_estoque;
+
+ALTER TABLE caixa_movimento
+DROP FOREIGN KEY fk_usuarios_caixa_movimento;
+
+ALTER TABLE auditoria_registro
+DROP FOREIGN KEY fk_usuarios_auditoria_registro;
+
+ALTER TABLE pedidos
+DROP FOREIGN KEY fk_usuarios_pedidos;
+
+ALTER TABLE movimento_estoque ADD COLUMN id_usuarios INT;
+
+ALTER TABLE movimento_estoque
+ADD CONSTRAINT fk_usuarios_movimento_estoque 
+FOREIGN KEY (id_usuarios) 
+REFERENCES usuarios(id);
+
+ALTER TABLE caixa_movimento ADD COLUMN id_usuarios INT;
+
+ALTER TABLE caixa_movimento
+ADD CONSTRAINT fk_usuarios_caixa_movimento
+FOREIGN KEY (id_usuarios) 
+REFERENCES usuarios(id);
+
+ALTER TABLE pedidos ADD COLUMN id_usuarios INT;
+
+ALTER TABLE pedidos
+ADD CONSTRAINT fk_usuarios_pedidos
+FOREIGN KEY (id_usuarios) 
+REFERENCES usuarios(id);
+
+ALTER TABLE auditoria_registro ADD COLUMN id_usuarios INT;
+
+ALTER TABLE auditoria_registro
+ADD CONSTRAINT fk_usuarios_auditoria_registro
+FOREIGN KEY (id_usuarios) 
+REFERENCES usuarios(id);

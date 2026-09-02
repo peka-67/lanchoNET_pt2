@@ -12,8 +12,4 @@ function checarCargo($cargoPermitido) {
 
 }
 
-//function loginAdm($cargoMaximo) {
-//    if ($_SESSION[''])
-//}
-
 ?>
