@@ -1,9 +1,31 @@
 <?php
+include './backend/conexao.php';
 include './backend/validacao.php';
 include './backend/validacaoUsuario.php';
 $destino = './backend/CRUDS/usuarios/inserir.php';
-
 checarCargo('admin');
+
+if (isset($_GET['id'])) {
+
+    $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
+
+    if ($id !== false && $id > 0) {
+    $id_restaurante = $_SESSION['idRestaurante'];
+    $sql = "SELECT * FROM usuarios WHERE id = ? AND id_restaurante = ?";
+    $stmt = mysqli_prepare($conexao, $sql);
+    mysqli_stmt_bind_param($stmt, "ii", $id, $id_restaurante);
+    mysqli_stmt_execute($stmt);
+    $resultadoUsuario = mysqli_stmt_get_result($stmt);
+    $usuario = mysqli_fetch_assoc($resultadoUsuario);
+    if (!$usuario) {
+        header('location: addUsuario.php');
+        exit;
+    }
+
+    $destino = './backend/CRUDS/usuarios/alterar.php';
+}
+}
+
 ?>
 
 <!doctype html>
@@ -34,19 +56,19 @@ checarCargo('admin');
                 ?>
             </div>
             <div class="col">
-                <form action="<?= $destino ?>" method="post" enctype="multipart/form-data" class="p-3">
+                <form action="<?=$destino?>" method="post" enctype="multipart/form-data" class="p-3">
                     <h2>Cadastro Usuario</h2>
                     <div class="mb-3">
                         <label class="form-label"> id </label>
-                        <input value="<?= $_SESSION['usuario_id'] ?>" type="text" name="id" class="form-control" readonly>
+                        <input value="<?= $usuario['id'] ?? "" ?>" type="text" name="id" class="form-control" readonly>
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Nome </label>
-                        <input value="" type="text" name="nome" class="form-control">
+                        <input value="<?= $usuario['nome'] ?? "" ?>" type="text" name="nome" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> email </label>
-                        <input value="" type="text" name="email" class="form-control">
+                        <input value="<?= $usuario['email'] ?? "" ?>" type="text" name="email" class="form-control">
                     </div>
                     <div class="mb-3">
                         <label class="form-label"> Senha </label>
@@ -79,16 +101,25 @@ checarCargo('admin');
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <th scope="row">1</th>
-                            <td>fulano</td>
-                            <td>fulano@gmail.com</td>
-                            <td>Gerente</td>
-                            <td>
-                                <a href=""> <i class="fa-solid fa-pen-to-square" style="color: rgb(1, 92, 164);"></i> </a>
-                                <a href="" onclick="return confirm('Deseja realmente excluir?')"> <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0);"></i> </a>
-                            </td>
-                        </tr>
+                        <?php
+                        $lista = "SELECT * FROM usuarios WHERE id_restaurante = ?";
+                        $stmt2 = mysqli_prepare($conexao, $lista);
+                        mysqli_stmt_bind_param($stmt2, "i", $_SESSION['idRestaurante']);
+                        mysqli_stmt_execute($stmt2);
+                        $colunas = mysqli_stmt_get_result($stmt2);
+                        while ($resultado = mysqli_fetch_assoc($colunas)) {
+                        ?>
+                            <tr>
+                                <th scope="row"> <?php echo $resultado['id'] ?> </th>
+                                <td><?= htmlspecialchars($resultado['nome']) ?></td>
+                                <td><?= htmlspecialchars($resultado['email']) ?></td>
+                                <td><?= htmlspecialchars($resultado['cargo']) ?></td>
+                                <td>
+                                    <a href="./addUsuario.php?id=<?=$resultado['id']?>"> <i class="fa-solid fa-pen-to-square" style="color: rgb(1, 92, 164);"></i> </a>
+                                    <a href="" onclick="return confirm('Deseja realmente excluir?')"> <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0);"></i> </a>
+                                </td>
+                            </tr>
+                        <?php } ?>
                     </tbody>
                 </table>
             </div>

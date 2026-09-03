@@ -19,6 +19,8 @@ $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 $cargo = $_POST['cargo'];
 $efetivado_em = date('Y-m-d H:i:s');
 
+
+
 $selectId = "SELECT * FROM usuarios WHERE id = ?";
 $stmt = mysqli_prepare($conexao, $selectId);
 mysqli_stmt_bind_param($stmt, "i", $id);
@@ -26,13 +28,12 @@ mysqli_stmt_execute($stmt);
 $restauranteId = mysqli_stmt_get_result($stmt);
 $resultadoRestaurante = mysqli_fetch_assoc($restauranteId); 
 
-$id_restaurante = $resultadoRestaurante['id_restaurante'];
 
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
     die('Email inválido.');
 }
 
-if ($id_restaurante === false || $id_restaurante <= 0) {
+if ($resultadoRestaurante === false || $resultadoRestaurante <= 0) {
     die("Restaurante inválido.");
 }
 
