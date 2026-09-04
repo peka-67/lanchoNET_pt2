@@ -84,7 +84,7 @@ if (isset($_GET['id'])) {
                             <option value="garcom">Garçom</option>
                         </select>
                     </div>
-                    <button style="background-color: #df8601 !important; border: none !important;" type="submit" class="btn btn-primary"> Cadastrar </button>
+                    <button name="id_restaurante" value="<?= $_SESSION['idRestaurante'] ?>" style="background-color: #df8601 !important; border: none !important;" type="submit" class="btn btn-primary"> Cadastrar </button>
                 </form>
             </div>
             <div class="col">
@@ -102,7 +102,7 @@ if (isset($_GET['id'])) {
                     </thead>
                     <tbody>
                         <?php
-                        $lista = "SELECT * FROM usuarios WHERE id_restaurante = ?";
+                        $lista = "SELECT * FROM usuarios WHERE id_restaurante = ? AND cargo != 'admin' AND ativo = 1";
                         $stmt2 = mysqli_prepare($conexao, $lista);
                         mysqli_stmt_bind_param($stmt2, "i", $_SESSION['idRestaurante']);
                         mysqli_stmt_execute($stmt2);

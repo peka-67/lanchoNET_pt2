@@ -12,18 +12,17 @@ if (!isset($_POST['nome'], $_POST['email'], $_POST['senha'], $_POST['cargo'])) {
     die('Todos os campos são obrigatórios.');
 }
 
-$id = $_POST['id'];
 $nome = $_POST['nome'];
 $email = $_POST['email'];
 $senha = password_hash($_POST['senha'], PASSWORD_DEFAULT);
 $cargo = $_POST['cargo'];
 $efetivado_em = date('Y-m-d H:i:s');
+$id_restaurante = $_POST['id_restaurante'];
 
 
-
-$selectId = "SELECT * FROM usuarios WHERE id = ?";
+$selectId = "SELECT * FROM restaurantes WHERE id = ?";
 $stmt = mysqli_prepare($conexao, $selectId);
-mysqli_stmt_bind_param($stmt, "i", $id);
+mysqli_stmt_bind_param($stmt, "i", $id_restaurante);
 mysqli_stmt_execute($stmt);
 $restauranteId = mysqli_stmt_get_result($stmt);
 $resultadoRestaurante = mysqli_fetch_assoc($restauranteId); 
@@ -37,16 +36,7 @@ if ($resultadoRestaurante === false || $resultadoRestaurante <= 0) {
     die("Restaurante inválido.");
 }
 
-$sql = "SELECT id FROM restaurantes WHERE id = ?";
-
-$stmt = mysqli_prepare($conexao, $sql);
-
-mysqli_stmt_bind_param($stmt, "i", $id_restaurante);
-mysqli_stmt_execute($stmt);
-
-$resultado = mysqli_stmt_get_result($stmt);
-
-if (mysqli_num_rows($resultado) == 0) {
+if (mysqli_num_rows($restauranteId) == 0) {
     die("O restaurante informado não existe.");
 }
 
