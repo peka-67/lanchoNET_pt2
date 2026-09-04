@@ -1,11 +1,14 @@
-<?php 
-    include '../../backend/conexao.php';
+<?php
+include '../../conexao.php';
 
-    $id = $_REQUEST['id'];
+$id = $_POST['id'];
+$ativo = $_POST['ativo'];
 
-    mysqli_query($conexao, "DELETE FROM  WHERE produto_id='$id'");
-    $sql = "DELETE FROM produto WHERE id='$id' ";
-    $resultado = mysqli_query($conexao, $sql);
+$sql2 = "UPDATE usuarios SET ativo= ? WHERE id= ?";
 
-    header('location:../../produto.php');
-?>
+$stmt = mysqli_prepare($conexao, $sql2);
+
+mysqli_stmt_bind_param($stmt, "ii", $ativo, $id);
+
+$resultado = mysqli_stmt_execute($stmt);
+

@@ -10,20 +10,20 @@ if (isset($_GET['id'])) {
     $id = filter_var($_GET['id'], FILTER_VALIDATE_INT);
 
     if ($id !== false && $id > 0) {
-    $id_restaurante = $_SESSION['idRestaurante'];
-    $sql = "SELECT * FROM usuarios WHERE id = ? AND id_restaurante = ?";
-    $stmt = mysqli_prepare($conexao, $sql);
-    mysqli_stmt_bind_param($stmt, "ii", $id, $id_restaurante);
-    mysqli_stmt_execute($stmt);
-    $resultadoUsuario = mysqli_stmt_get_result($stmt);
-    $usuario = mysqli_fetch_assoc($resultadoUsuario);
-    if (!$usuario) {
-        header('location: addUsuario.php');
-        exit;
-    }
+        $id_restaurante = $_SESSION['idRestaurante'];
+        $sql = "SELECT * FROM usuarios WHERE id = ? AND id_restaurante = ?";
+        $stmt = mysqli_prepare($conexao, $sql);
+        mysqli_stmt_bind_param($stmt, "ii", $id, $id_restaurante);
+        mysqli_stmt_execute($stmt);
+        $resultadoUsuario = mysqli_stmt_get_result($stmt);
+        $usuario = mysqli_fetch_assoc($resultadoUsuario);
+        if (!$usuario) {
+            header('location: addUsuario.php');
+            exit;
+        }
 
-    $destino = './backend/CRUDS/usuarios/alterar.php';
-}
+        $destino = './backend/CRUDS/usuarios/alterar.php';
+    }
 }
 
 ?>
@@ -56,7 +56,7 @@ if (isset($_GET['id'])) {
                 ?>
             </div>
             <div class="col">
-                <form action="<?=$destino?>" method="post" enctype="multipart/form-data" class="p-3">
+                <form action="<?= $destino ?>" method="post" enctype="multipart/form-data" class="p-3">
                     <h2>Cadastro Usuario</h2>
                     <div class="mb-3">
                         <label class="form-label"> id </label>
@@ -115,8 +115,8 @@ if (isset($_GET['id'])) {
                                 <td><?= htmlspecialchars($resultado['email']) ?></td>
                                 <td><?= htmlspecialchars($resultado['cargo']) ?></td>
                                 <td>
-                                    <a href="./addUsuario.php?id=<?=$resultado['id']?>"> <i class="fa-solid fa-pen-to-square" style="color: rgb(1, 92, 164);"></i> </a>
-                                    <a href="" onclick="return confirm('Deseja realmente excluir?')"> <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0);"></i> </a>
+                                    <a href="./addUsuario.php?id=<?= $resultado['id'] ?>"> <i class="fa-solid fa-pen-to-square" style="color: rgb(1, 92, 164);"></i> </a>
+                                    <a href="./inativar.php" onclick=""> <i class="fa-solid fa-trash" style="color: rgb(255, 0, 0);"></i> </a>
                                 </td>
                             </tr>
                         <?php } ?>
